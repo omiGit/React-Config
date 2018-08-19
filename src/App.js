@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import './App.css';
 
 class TodoApp extends Component {
   state={
@@ -10,7 +9,7 @@ class TodoApp extends Component {
     return (
       <div className="container text-center">
         <h1>
-Todo App
+Welcome
         </h1>
       </div>
     );

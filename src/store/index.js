@@ -9,9 +9,8 @@ const composeEnhancers = process.env.NODE_ENV === 'development'
 
 const sagaMiddleware = createSagaMiddleware();
 
-sagaMiddleware.run();
 
 export { sagaMiddleware };
-export default createStore(combineReducers(),
+export default createStore(combineReducers({ }),
   composeEnhancers(applyMiddleware(sagaMiddleware)));
 

@@ -9,6 +9,9 @@ module.exports={
       "classes": true
     }
   },
+  "globals": {
+    "test": false
+  },
   "env": {
     "node": true,
     "browser": true,
