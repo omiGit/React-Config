@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
+import _ from 'lodash';
+import Loader from '../component/Loader/Loader';
 
-// import Loader from '../../component/Loader/Loader';
-const Loader = () => 'Loading';
 export default propName => WrappedComponent => class LoaderHOC extends Component {
   isEmpty(prop) {
     return (
       prop === undefined
           || prop === null
-          || (prop.hasOwnProperty('length') && prop.length === 0)
-          || (prop.constructor === Object && Object.keys('length') === 0)
+          || (_.hasIn(prop, 'length') && prop.length === 0)
+          || (prop.constructor === Object && _.keys('length') === 0)
     );
   }
 
